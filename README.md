@@ -6,7 +6,7 @@
     permita criar, atualizar, apagar e listar produtos armazenados em um banco de
     dados.
 
-### Requisitos:
+> Requisitos:
 - Frontend(Vue.js): Crud
 - Backend(Laravel): API Restful oferecendo endpoints
 - Banco de Dados: Mysql/PostgresSQL,SQLite ...
@@ -20,7 +20,7 @@
 
 # Inicio do Projeto Vue+Laravel
 
-##  ?? Tecnologias utilizadas
+## Tecnologias utilizadas
 ~~~
 
 - Laravel 10+
@@ -29,7 +29,7 @@
 - Docker e Docker Compose
 - Axios
 ~~~
-## ?? Funcionalidades
+## Funcionalidades
 ~~~
 
 - [x] Listar produtos
@@ -40,20 +40,19 @@
 - [x] API RESTful com Laravel
 ~~~
 
-## ?? Deploy do Projeto 
+##  Deploy do Projeto 
 ### Pré-requisitos
 
 - Docker 
 - Docker compose
   
-### Clne o projeto 
+### Clone o projeto 
 ~~~bash
 git clone https://github.com/JhonMercedes/desafio-projeto-vue-laravel.git
 
 cd nome-do-repo
 ~~~ 
 
-- Criar um diretorio para iniciar o projeto.
 - Nesse exemplo o nome será **catalogo-produtos**
 ~~~bash
 ~ mkdir catalogo-produtos
@@ -62,7 +61,7 @@ cd nome-do-repo
 ~~~
 
 > Subindo os containers
-- Execute o comando 
+
 ~~~bash
 docker compose up --build 
 docker ps # para ver os container UP
@@ -110,20 +109,6 @@ docker compose down # use para destrutir todos os containers
  ? Network catalogo-produto-pj_default  Removed 
 ~~~
  
-## ?? Estrutura do Projeto
-
-~~~
-??? backend (Laravel)
-?   ??? app/
-?   ??? routes/api.php
-?   ??? ...
-??? frontend (Vue.js)
-?   ??? src/
-?   ??? ...
-??? docker-compose.yml
-??? README.md
-~~~
-
 ##  Observações
 A API RESTful está disponível em /api/products
 ~~~bash
