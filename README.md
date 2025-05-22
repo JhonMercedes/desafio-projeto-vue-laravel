@@ -385,5 +385,10 @@ select * from products;
 #
 ~~~bash
 docker compose down # use para destrutir todos os containers
+
+ ? Container laravel-app                Removed                                                                                                                                           10.3s 
+ ? Container vue-frontend               Removed                                                                                                                                            1.1s 
+ ? Container mysql-db                   Removed                                                                                                                                            2.6s 
+ ? Network catalogo-produto-pj_default  Removed 
 ~~~
  
