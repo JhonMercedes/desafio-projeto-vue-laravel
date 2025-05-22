@@ -153,6 +153,19 @@ use Illuminate\Support\Facades\Route;
 Route::apiResource('products', ProductController::class);
 ~~~
 
+## Estrutura Frontend
+~~~
+frontend/
+??? src/
+?   ??? components/
+?   ?   ??? ProductForm.vue 
+?   ??? views/
+?   ?   ??? ProductList.vue
+?   ??? App.vue
+?   ??? main.js
+?   ??? router/
+?       ??? index.js
+~~~
 
 > Frontend
 - Volte a raiz do projeto `/` e execute  `npm init vue@latest frontend`
