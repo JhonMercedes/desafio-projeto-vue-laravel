@@ -91,7 +91,7 @@ php artisan migrate
 php artisan make:provider RouteServiceProvider
 php artisan make:controller API/ProductController --api
 ~~~
-- Acesse: `database/migrations/xxxx_create_products_table.php`
+- Acesse: `database/migrations/xxxx_create_products_table.php` e altere o Schema=>
 ~~~php
 public function up()
 {
@@ -331,9 +331,17 @@ const handleSubmit = () => {
 
 - Execute o comando 
 ~~~bash
-docker compose up --build
-docker compose down # use para destrutir todos os containers
+docker compose up --build 
+docker ps # para ver os container UP
+
+CONTAINER ID   IMAGE                          COMMAND                  CREATED        STATUS        PORTS                                                    NAMES
+cb3c085beb78   catalogo-produto-pj-app        "docker-php-entrypoi?"   43 hours ago   Up 30 hours   0.0.0.0:8000->8000/tcp, [::]:8000->8000/tcp              laravel-app
+f1be07f07a9b   mysql:8.0                      "docker-entrypoint.s?"   43 hours ago   Up 43 hours   0.0.0.0:3306->3306/tcp, [::]:3306->3306/tcp, 33060/tcp   mysql-db
+c7904a0a49c3   catalogo-produto-pj-frontend   "docker-entrypoint.s?"   43 hours ago   Up 43 hours   0.0.0.0:5173->5173/tcp, [::]:5173->5173/tcp              vue-frontend
+
 ~~~
+
+
 - Acesse:
 
 Laravel API: http://localhost:8000/api/products
@@ -342,24 +350,27 @@ Vue frontend: http://localhost:5173
 
 ## Container do Mysql
 
-- Acesse o banco de dados pelo comando 
+- Acesse o banco de dados para verificar os produtos cadastrados, acesse o container pelo comando 
 ~~~bash 
 docker exec -it mysql-db mysql -u root -p
 # Senha: root (ou a que você definiu)
 ~~~
+#
 ~~~sql
 show databases;
 use produtos_db;
 show tables;
 
 select * from products;
-
 +----+-------+-------------+---------+---------------------+---------------------+
 | id | name  | description | price   | created_at          | updated_at          |
 +----+-------+-------------+---------+---------------------+---------------------+
 |  6 | fogao | 6 bocas     | 6000.00 | 2025-05-22 18:46:44 | 2025-05-22 19:05:39 |
 |  7 | fogao | 4 bocas     | 1300.00 | 2025-05-22 19:03:33 | 2025-05-22 19:05:57 |
 +----+-------+-------------+---------+---------------------+---------------------+
-2 rows in set (0.00 sec)
 ~~~
-
+#
+~~~bash
+docker compose down # use para destrutir todos os containers
+~~~
+ 
