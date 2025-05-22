@@ -55,15 +55,14 @@ cd nome-do-repo
 
 - Nesse exemplo o nome será **catalogo-produtos**
 ~~~bash
-~ mkdir catalogo-produtos
 ~ cd catalogo-produtos/
-~ catalogo-produtos# |
+~ catalogo-produtos#
 ~~~
 
 > Subindo os containers
 
 ~~~bash
-docker compose up --build 
+docker compose up -d --build 
 docker ps # para ver os container UP
 
 CONTAINER ID   IMAGE                          COMMAND                  CREATED        STATUS        PORTS                                                    NAMES
