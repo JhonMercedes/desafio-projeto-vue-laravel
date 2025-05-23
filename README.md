@@ -71,6 +71,12 @@ f1be07f07a9b   mysql:8.0                      "docker-entrypoint.s?"   43 hours 
 c7904a0a49c3   catalogo-produto-pj-frontend   "docker-entrypoint.s?"   43 hours ago   Up 43 hours   0.0.0.0:5173->5173/tcp, [::]:5173->5173/tcp              vue-frontend
 ~~~
 
+!Execute migres model e provider no container
+~~~docker
+docker exec -it laravel-app php artisan migrate
+~~~
+
+
 - Acesse:
 
 Laravel API: http://localhost:8000/api/products
