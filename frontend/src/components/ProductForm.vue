@@ -5,14 +5,14 @@
       <input v-model="form.name" required />
     </div>
     <div>
-      <label>Descrição:</label>
+      <label>DescriÃ§Ã£o:</label>
       <input v-model="form.description" required />
     </div>
     <div>
-      <label>Preço:</label>
+      <label>PreÃ§o:</label>
       <input type="number" v-model="form.price" required />
     </div>
-    <!-- Botão muda texto conforme modo -->
+    <!-- BotÃ£o muda texto conforme modo -->
     <button type="submit">{{ form.id ? 'Atualizar' : 'Cadastrar' }}</button>
 
   </form>
@@ -22,7 +22,7 @@
 import { ref, watch, computed, defineProps, defineEmits } from 'vue'
 
 const props = defineProps({
-  product: Object // Recebe dados do produto em modo edição (opcional)
+  product: Object // Recebe dados do produto em modo ediÃ§Ã£o (opcional)
 })
 
 const emit = defineEmits(['submit'])
@@ -39,7 +39,7 @@ watch(
   () => props.product,
   (newVal) => {
     if (newVal) {
-      form.value = { ...newVal } //modo edição
+      form.value = { ...newVal } //modo ediÃ§Ã£o
     } else {
       form.value = { name: '', description: '', price: '' } //modo criar
     }

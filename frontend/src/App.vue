@@ -5,11 +5,11 @@
 </template>
 
 <script setup>
-// Não precisa de nada aqui se só estiver usando roteamento
+// nÃ£o precisa de nada aqui se se estiver usando roteamento
 </script>
 
 <style>
-/* Você pode adicionar estilos globais aqui, se quiser */
+/* VocÃª pode adicionar estilos globais aqui, se quiser */
 body {
   font-family: Arial, sans-serif;
 }

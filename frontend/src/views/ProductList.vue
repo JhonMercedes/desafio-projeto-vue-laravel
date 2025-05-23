@@ -1,8 +1,8 @@
 <template>
   <div>
-    <h1>Catálogo de Produtos</h1>
+    <h1>Catalogo de Produtos</h1>
 
-    <!-- Formulário para adicionar produto -->
+    <!-- FormulÃ¡rio para adicionar produto -->
     <ProductForm :product="selectedProduct" @submit="createOrUpdateProduct" />
     <!-- <ProductForm @submit="createProduct" />  -->
 
@@ -33,14 +33,14 @@ const fetchProducts = async () => {
 
 const createOrUpdateProduct = async (data) => {
   if (data.id) {
-    // Atualização se existir ID
+    // AtualizaÃ§Ã£o se existir ID
     await axios.put(`http://localhost:8000/api/products/${data.id}`, data); // atualiza dados preenchidos
   } else {
-    // Criação de novo produto
+    // CriaÃ§Ã£o de novo produto
     await axios.post("http://localhost:8000/api/products", data); // Novo produto criado
   }
 
-  selectedProduct.value = null; // limpa após salvar
+  selectedProduct.value = null; // limpa apÃ³s salvar
   fetchProducts();
 };
 // const createProduct = async (data) => {
@@ -50,12 +50,12 @@ const createOrUpdateProduct = async (data) => {
 //     await fetchProducts()
 //   } catch (error) {
 //     console.error('Erro ao cadastrar produto:', error)
-//     alert('Erro ao cadastrar produto. Verifique se o backend está rodando.')
+//     alert('Erro ao cadastrar produto. Verifique se o backend estÃ¡ rodando.')
 //   }
 // }
 
 const editProduct = (product) => {
-  selectedProduct.value = { ...product }; // clona produto para edição
+  selectedProduct.value = { ...product }; // clona produto para ediÃ§Ã£o
 };
 
 const deleteProduct = async (id) => {
