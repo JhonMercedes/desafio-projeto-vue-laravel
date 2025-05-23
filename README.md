@@ -53,12 +53,6 @@ git clone https://github.com/JhonMercedes/desafio-projeto-vue-laravel.git
 cd nome-do-repo
 ~~~ 
 
-- Nesse exemplo o nome será **catalogo-produtos**
-~~~bash
-~ cd catalogo-produtos/
-~ catalogo-produtos#
-~~~
-
 Configure o arquivo .env para usar o Mysql
 Acesse a raiz do diretorio `backend/` crie o arquivo `.env` e copie o conteudo do `.env.example`
 
