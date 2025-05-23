@@ -59,6 +59,17 @@ cd nome-do-repo
 ~ catalogo-produtos#
 ~~~
 
+Configure o arquivo .env para usar o Mysql
+Acesse a raiz do diretorio `backend/` criee o arquivo `.env`
+~~~env
+DB_CONNECTION=mysql
+DB_HOST=mysql
+DB_PORT=3306
+DB_DATABASE=produtos_db
+DB_USERNAME=root
+DB_PASSWORD=root
+~~~
+
 > Subindo os containers
 
 ~~~bash
