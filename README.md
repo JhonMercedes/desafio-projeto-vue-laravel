@@ -53,9 +53,6 @@ git clone https://github.com/JhonMercedes/desafio-projeto-vue-laravel.git
 cd nome-do-repo
 ~~~ 
 
-Configure o arquivo .env para usar o Mysql
-Acesse a raiz do diretorio `backend/` crie o arquivo `.env` e copie o conteudo do `.env.example`
-
 > Subindo os containers
 
 ~~~bash
@@ -68,7 +65,7 @@ f1be07f07a9b   mysql:8.0                      "docker-entrypoint.s?"   43 hours 
 c7904a0a49c3   catalogo-produto-pj-frontend   "docker-entrypoint.s?"   43 hours ago   Up 43 hours   0.0.0.0:5173->5173/tcp, [::]:5173->5173/tcp              vue-frontend
 ~~~
 
-!Caso a tabela products não for encontrada ,execute o comando migrate
+> Execute o Migrate com o comando abaixo
 ~~~docker
 docker exec -it laravel-app php artisan migrate
 ~~~
