@@ -1,8 +1,8 @@
 # Desafio Desenvolvedor Junior - Novo Mundo
 
-## Descrição do Projeto
-    A aplicação deve permitir que o usuário interaja com um catálogo de produtos
-    utilizando uma interface web. O objetivo é implementar uma solução que
+## DescriÃ§Ã£o do Projeto
+    A aplicaÃ§Ã£o deve permitir que o usuÃ¡rio interaja com um catÃ¡logo de produtos
+    utilizando uma interface web. O objetivo Ã© implementar uma soluÃ§Ã£o que
     permita criar, atualizar, apagar e listar produtos armazenados em um banco de
     dados.
 
@@ -10,7 +10,7 @@
 - Frontend(Vue.js): Crud
 - Backend(Laravel): API Restful oferecendo endpoints
 - Banco de Dados: Mysql/PostgresSQL,SQLite ...
-- Documentação
+- DocumentaÃ§Ã£o
 - Deploy
 
 - Backend Laravel com API RESTful (/api/products)
@@ -36,12 +36,12 @@
 - [x] Cadastrar novo produto
 - [x] Atualizar produto existente
 - [x] Remover produto
-- [x] Interface amigável com Vue.js
+- [x] Interface amigÃ¡vel com Vue.js
 - [x] API RESTful com Laravel
 ~~~
 
 ##  Deploy do Projeto 
-### Pré-requisitos
+### PrÃ©-requisitos
 
 - Docker 
 - Docker compose
@@ -53,7 +53,7 @@ git clone https://github.com/JhonMercedes/desafio-projeto-vue-laravel.git
 cd nome-do-repo
 ~~~ 
 
-- Nesse exemplo o nome será **catalogo-produtos**
+- Nesse exemplo o nome serÃ¡ **catalogo-produtos**
 ~~~bash
 ~ cd catalogo-produtos/
 ~ catalogo-produtos#
@@ -71,7 +71,7 @@ f1be07f07a9b   mysql:8.0                      "docker-entrypoint.s?"   43 hours 
 c7904a0a49c3   catalogo-produto-pj-frontend   "docker-entrypoint.s?"   43 hours ago   Up 43 hours   0.0.0.0:5173->5173/tcp, [::]:5173->5173/tcp              vue-frontend
 ~~~
 
-!Execute migres model e provider no container
+!Caso a tabela products nÃ£o for encontrada ,execute o comando migrate
 ~~~docker
 docker exec -it laravel-app php artisan migrate
 ~~~
@@ -88,7 +88,7 @@ Vue frontend: http://localhost:5173
 - Acesse o banco de dados para verificar os produtos cadastrados, acesse o container pelo comando 
 ~~~bash 
 docker exec -it mysql-db mysql -u root -p
-# Senha: root (ou a que você definiu)
+# Senha: root (ou a que vocÃª definiu)
 ~~~
 #
 ~~~sql
@@ -114,9 +114,9 @@ docker compose down # use para destrutir todos os containers
  ? Network catalogo-produto-pj_default  Removed 
 ~~~
  
-##  Observações
-A API RESTful está disponível em /api/products
+##  ObservaÃ§Ãµes
+A API RESTful estÃ¡ disponÃ­vel em /api/products
 ~~~bash
 curl http://localhost:8000/api/products
 ~~~
-Os dados são persistidos no container MySQL (produtos_db)
+Os dados sÃ£o persistidos no container MySQL (produtos_db)
