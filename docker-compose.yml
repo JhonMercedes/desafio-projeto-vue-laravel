@@ -1,4 +1,4 @@
-version: '3.8'
+version: "3.8"
 
 services:
   app:
@@ -15,6 +15,14 @@ services:
       - DB_DATABASE=produtos_db
       - DB_USERNAME=root
       - DB_PASSWORD=root
+    command: >
+      sh -c "
+        cp .env.example .env &&
+        composer install &&
+        php artisan key:generate &&
+        until php artisan migrate; do sleep 3; done &&
+        php artisan serve --host=0.0.0.0 --port=8000
+      "
 
   mysql:
     image: mysql:8.0
